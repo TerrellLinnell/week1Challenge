@@ -13,5 +13,4 @@ sillyShapeConstructor.prototype.updateColor = function (newColor) {
 
 
 
-
 module.exports = sillyShapeConstructor;

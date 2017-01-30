@@ -9,7 +9,7 @@ function makeSillyShapes(){
 
   for (var i = 0; i < 10; i++) {
     // Use your shape constructor function to build 10 random shapes.
-    var circle = new sillyShapeConstructor(shapes[math.random()*shapes.length], colors[math.random()*colors.length], sides[math.random()*sides.length]);
+    var newShape = new sillyShapeConstructor(shapes[Math.random()*shapes.length], colors[Math.random()*colors.length], sides[Math.random()*sides.length]);
 
     // Figure out how to grab a random item from the array, in order to get a shape, color, and sides
     // for the constructor
@@ -19,20 +19,20 @@ function makeSillyShapes(){
       }
     }
     //Dont forget to push your newly made shape into your sillyShapes array.
-    sillyShapes.push()
+    sillyShapes.push(newShape);
   }
 
   return sillyShapes
 }
-
-console.log(makeSillyShapes());
+makeSillyShapes();
+console.log(sillyShapes);
 
 
 function renderShapesToHTML() {
   // You will need to loop through the sillyShapes array
   // and append the HTML to the UL.
   for (var i = 0; i < sillyShapes.length; i++) {
-    $('#silly-shapes-list').append('<ul> <li>' + this.name + '</li> <li>' + this.color + '</li> <li>' + this.sides '</li> </ul>')
+    $('#silly-shapes-list').append('<ul> <li>' + sillyShapeConstructor.getInfo + '</li> </ul>');
   }
 
 };
